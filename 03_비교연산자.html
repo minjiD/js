@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>비교연산자</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var d = "20";
+        var result;
+
+        result = a > b;
+        document.write(result, "<br>");
+
+        result = a < b;
+        document.write(result, "<br>");
+
+        result = a == c;
+        document.write(result, "<br>");
+
+        result = b == d; //타입을 제외한 값만 같은지 비교 (True)
+        document.write(result, "<br>");
+
+        result = b === d; //타입을 포함한 값만 같은지 비교 (False)
+        document.write(result, "<br>");
+
+        result = a != c;
+        document.write(result, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
