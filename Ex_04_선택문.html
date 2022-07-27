@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // var num = prompt("번호를 입력하세요.\n 통화 1, 문자 2, 영상통화 3", "0");
+        var num = prompt("번호를 입력하세요.\n 통화 1, 문자 2, 영상통화 3", 1);
+        var res;
+
+        // switch(num) {
+        switch(Number(num)) {
+            case 1:
+                res = "전화를 겁니다.";
+            break;
+            case 2:
+                res = "문자를 보냅니다.";
+            break;
+            case 3:
+                res = "영상통화를 연결합니다.";
+            break;
+            default:
+                res = "잘못 입력하셨습니다.";
+            break;
+        }
+
+        document.write(res);
+    </script>
+    <title>선택문</title>
+</head>
+<body>
+    
+</body>
+</html>

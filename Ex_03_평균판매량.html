@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var sale1st = 1200;
+        var sale2nd = 1300;
+        var sale3rd = 1000;
+        
+        var saleAvg = (sale1st + sale2nd + sale3rd) / 3;
+        // document.write(saleAvg, "<br>");
+
+        var sale4th = prompt("4분기 판매량을 입력하세요.", "0");
+        var result = saleAvg <= sale4th ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+        document.write(result);
+    </script>
+    <title>평균판매량</title>
+</head>
+<body>
+    
+</body>
+</html>

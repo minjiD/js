@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var name = prompt("당신의 이름을 입력하세요.", "");
+        var height = prompt("당신의 신장을 입력하세요", "0");
+        var weight = prompt("당신의 체중을 입력하세요", "0");
+        
+        var w = (height - 100) * 0.9;
+        var result = weight >= w-5 && weight <= w+5;
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+        
+        document.write(name + "님은 " + result);
+    </script>
+    <title>적정체중구하기</title>
+</head>
+<body>
+    
+</body>
+</html>

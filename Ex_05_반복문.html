@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        //변수 선언 - 홀수, 짝수, 조건
+        var odd = 0;
+        var even = 0;
+        var num = 1;
+
+        //반복 - 10회 동안
+        while(num <= 10) {
+            //조건의 숫자가 짝수이면
+            if(num % 2 === 0) {
+                even += num;
+                // document.write(num + "번쨰 even : " + even ,"<br>");
+            }
+            //조건의 숫자가 홀수이면
+            else {
+                odd += num;
+                // document.write(num + "번쨰 odd : " + odd ,"<br>");
+            }
+            num++;
+        }
+
+        console.log("홀수 : " + odd + ", 짝수 : " + even);
+    </script>
+    <title>반복문</title>
+</head>
+<body>
+    
+</body>
+</html>
