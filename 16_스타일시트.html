@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .red {
+            color: red;
+            font-weight: bold;
+        }
+
+        .green {
+            color: green;
+            font-weight: bold;
+        }
+
+        .blue{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        //1부터 100까지 
+        for(var i = 1; i <= 100; i++) {
+            //5배수이면서 7배수가 아니면 실행 - &&
+            if(i % 5 === 0 && i % 7 !== 0) {
+                document.write(`<p class="red"> ${i} </p>`); //p 태그 자동 줄바꿈됨
+            }
+            //7배수이면서 5배수 아니면 실행 - &&
+            else if(i % 7 === 0 && i % 5 !== 0) {
+                document.write(`<p class="green"> ${i} </p>`);
+            }
+            //7배수이면서 5배수이면 실행 - &&
+            else if(i % 7 === 0 && i % 5 === 0) {
+                document.write(`<p class="blue"> ${i} </p>`);
+            }
+        }
+    </script>
+    <title>스타일시트 적용</title>
+</head>
+<body>
+    
+</body>
+</html>
