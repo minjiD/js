@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <style>
+        .title {
+            border: 1px solid black;
+            background: #f1f0f0;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script>
+        let cnt = prompt("전체 응모자 수 :");
+        let randomNum;
+
+        //전체 응모자 수보다 작거나 같은 수 내에서 랜덤
+        randomNum = Math.floor(Math.random() * cnt) + 1;
+
+        document.write(`<h1 class="title">당첨자 발표</h1>`);
+        document.write(`전체 응모자 수 : ${cnt}명 <br>`);
+        document.write(`당첨자 : ${randomNum}번 <br>`);
+    </script>
+    <title>당첨자 발표</title>
+</head>
+<body>
+    
+</body>
+</html>
