@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var tt = "Hello Thank you good luck to you";
+
+        document.write(tt.charAt(16), "<br>");
+        document.write(tt.indexOf("you"), "<br>");
+        document.write(tt.indexOf("you", 14), "<br>");
+        // indexOf("찾는 문자", 시작인덱스번호(생략가능));
+        document.write(tt.lastIndexOf("you"), "<br>");
+        document.write(tt.match("luc"), "<br>");
+        document.write(tt.match("logo"), "<br>");
+        document.write(tt.length, "<br>");
+        document.write(tt.toUpperCase(), "<br>");
+        document.write(tt.toLowerCase(), "<br>");
+        document.write(tt.replace("you", "me"), "<br>");
+        //replace("찾는문자", "바꿀문자");
+        document.write(tt.slice(4, 7), "<br>");
+        document.write(tt.slice(16, 26), "<br>");
+        //slice(찾는 첫문자 인덱스, 찾는 마지막 문자 인덱스 + 1);
+        // 아스키코드 반환 - String.fromCharCode(아스키코드번호)
+        document.write(String.fromCharCode(33),"<br>"); // !
+        document.write(String.fromCharCode(36),"<br>"); // $
+        document.write(String.fromCharCode(38),"<br>"); // &
+    </script>
+    <title>문자열 객체</title>
+</head>
+<body>
+    
+</body>
+</html>

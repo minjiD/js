@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+       var today = new Date(); //today라는 변수에 Date()를 대입
+       var nowMonth = today.getMonth() + 1; //현재 월에서 -1로 출력된다.
+       var nowDate = today.getDate();
+       var nowDay = today.getDay();
+       var nowHour = today.getHours();
+       var nowMinutes = today.getMinutes();
+       var nowSecond = today.getSeconds();
+
+       document.write(`<h1>오늘 날짜 정보</h1>`);
+       document.write(`현재 월 : ${nowMonth} <br>`);
+       document.write(`현재 일 : ${nowDate} <br>`);
+       document.write(`현재 요일 : ${nowDay} <br>`);
+       document.write(`현재 시간 : ${nowHour} <br>`);
+       document.write(`현재 분 : ${nowMinutes} <br>`);
+       document.write(`현재 초 : ${nowSecond} <br>`);
+
+       var worldcup = new Date(2022,10,21);
+       var theYear = worldcup.getFullYear();
+       var theMonth = worldcup.getMonth() + 1;
+       var theDate = worldcup.getDate();
+       var theDay = worldcup.getDay();
+
+       document.write(`<h1>월드컵 날짜 정보</h1>`);
+       document.write(`월드컵은 몇 년? ${theYear} 년<br>`);
+       document.write(`월드컵은 몇 월? ${theMonth} 월<br>`);
+       document.write(`월드컵은 몇 일? ${theDate} 일<br>`);
+       document.write(`월드컵은 무슨 요일? ${theDay} <br>`);
+    </script>
+    <title>날짜 객체</title>
+</head>
+<body>
+    
+</body>
+</html>

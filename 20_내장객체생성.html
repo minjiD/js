@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        //저장 공간을 만들고 거기에 데이터를 넣고 기능을 만들었음
+        var tv = new Object(); //내장 객체를 새로 생성하겠다는 의미
+        tv.color = "red"; //속성
+        tv.price = 300000;
+        tv.info = function() { //함수
+            document.write(`tv 색상 ${this.color} <br>`);
+            //this는 자기 자신을 호출 => 여기선 tv를 호출한 것
+            document.write(`tv 가격 ${this.price} <br>`);
+        }
+
+        document.write(`<h1>tv 객체 메서드 호출</h1>`);
+        tv.info(); //생성한 함수를 호출
+
+        /*
+        var car = new Object();
+        car.color = "black";
+        car.price = 100;
+        car.info = function() { //정보를 담을 수 있는 함수 생성
+            document.write(`car 색상 ${this.color} <br>`);
+            document.write(`car 가격 ${this.price} <br>`);
+        }
+
+        document.write("<h1>car 객체 메서드 호출</h1>")
+        car.info();
+        */
+        
+        //리터럴 방식
+        var car = { //사용자 객체(내장객채)를 만들겠다는 의미
+            color : "blue",
+            price : 1000,
+            info : function() {
+                document.write(`car 색상 ${this.color} <br>`); 
+                //저장공간 안에 있는 것을 호출하여 참조하는 것
+                document.write(`car 가격 ${this.price} <br>`);
+            }
+        };
+
+        document.write("<h1>car 객체 메서드 호출</h1>")
+        car.info();
+    </script>
+    <title>내장객체생성</title>
+</head>
+<body>
+    
+</body>
+</html>
