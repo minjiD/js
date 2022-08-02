@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        let addNum = 0;
+        let subNum = 100;
+
+        /*
+        let auto_1 = setInterval(
+            function() {
+                addNum++;
+                console.log(`addNum : ${addNum}번 째`);
+            }, 3000
+        )
+
+        let auto_2 = setInterval(
+            function() {
+                subNum--;
+                console.log(`subNum : ${subNum}번 째`);
+            }, 3000
+        )
+        */
+
+        let num = 0;
+        let auto_3 = setTimeout( //한번만 실행
+            function() {
+                console.log(`1초 후에 실행됩니다.`);
+            }, 1000
+        )
+        
+        let auto_4 = setInterval( //계속적으로 실행
+            function() {
+                console.log(`1초 마다 실행됩니다.(${num}번째)`);
+                num++;
+            }, 1000
+        )
+    </script>
+    <title>일정시간 반복</title>
+</head>
+<body>
+    <button onClick="clearInterval(auto_1);">증가정지</button>
+    <button onClick="clearInterval(auto_2);">감소정지</button>
+</body>
+</html>

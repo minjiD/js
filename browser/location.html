@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const ver = navigator.userAgent;
+        // console.log(ver);
+
+        const isIE = /trident/i.test(ver); // -/trident/i는 자바스크립트의 정규표현식 사용
+				// trident는 Internet Explorer에 있는 고유한 버전 이름
+				// i는 정규 표현식으로 대/소문자를 식별하지 않는 것을 의미
+				// 정규표현식 사용 방식 : '/확인할문자열/옵션' or '/확인할문자열패턴/옵션'
+        
+        if(isIE){
+            alert("익스플로러 브라우저로 접속하셨네요. 이 웹페이즈는 익스플로러를 지원하지 않습니다. 다른 브라우저로 접속하세요.");
+        }
+        //템플릿 문자(``)-최신 문법 를 인식하지 못함 
+				//Internet Explorer 같이 업데이트가 자주 안되는 브라우저일 경우 최신 문법 인식 못함
+    </script>
+    <title>navigator</title>
+</head>
+<body>
+
+</body>
+</html>

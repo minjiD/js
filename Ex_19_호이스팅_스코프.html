@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        {// 블록
+            let a = 1;
+            console.log(a);
+        }
+        //console.log(a); //ReferenceError
+
+        {
+            var b = 2;
+            console.log(b);
+        }
+        console.log(b);
+        // var 스코프 != 블록 -> if문, for문에 사용되는 블록을 의미
+        // var 스코프 == 함수 블록
+        // 스코프 : 변수가 살아있는 구간
+        function myFunc(){
+            // var d;
+            var c = 3;
+            console.log(c);
+            console.log(d); // undefined
+            var d;
+        }
+        myFunc();
+        // console.log(c); //ReferenceError
+
+        // if(){
+
+        // }
+
+        for(var i =0; i<10; i++){
+
+        }
+
+        console.log(i); // 정상적으로 값 출력됨
+    </script>
+    <title>호이스팅 스코프</title>
+</head>
+<body>
+    
+</body>
+</html>

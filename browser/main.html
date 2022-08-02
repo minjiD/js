@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // window.open("notice.html", "pop", "width=500, height=400, left=200, top=300");
+        //이름이 주어지면 연속으로 팝업이 나오지 않는다.
+
+        function openCenter(doc, win, w, h) {
+            var left = (screen.availWidth - w)/2; //팝업창의 왼쪽 좌표
+            var top = (screen.availHeight - h)/2; //팝업창의 위쪽 좌표
+            var opt = "left=" + left + ", top=" + top + ",  width=" + w + " , height=" + h;
+
+            window.open(doc, win, opt);
+        }
+
+        // openCenter("notice.html", "pop", 500, 400);
+        openCenter("notice.html", "pop", 600, 650); //이미지
+    </script>
+    <title>main</title>
+</head>
+<body>
+    <p>문서를 열면 팝업창이 뜹니다.</p>
+</body>
+</html>

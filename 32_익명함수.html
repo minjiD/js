@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        /* 참조함수
+        const hi = function() {
+             alert(`안녕하세요.`);
+        }
+
+        hi();
+        */
+
+        /*
+        const hi = () => {
+            alert(`안녕하세요.`);
+        }
+
+        hi();
+        */
+
+        //const hi = () => alert(`안녕하세요.`);
+        //hi();
+
+        /*
+        let hi = function(user) {
+            document.write(user + "님, 안녕하세요?");
+        }
+        */
+        //let hi = (user) => {document.write(user + "님, 안녕하세요?");};
+        let hi = user => document.write(user + "님, 안녕하세요?");
+
+        /*
+        let sum = function(a, b) {
+            return a+b;
+        }
+        */
+
+        //기본 형식 변수, 상수 이름 = (매개변수) => {실행문}; //익명함수
+        let sum = (a, b) => a+b;
+    </script>
+    <title>익명함수</title>
+</head>
+<body>
+    
+</body>
+</html>

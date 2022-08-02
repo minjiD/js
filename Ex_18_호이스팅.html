@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // var a = 1;
+        var a;
+        a = 1;
+
+        // 선언 조차 안됨
+        // console.log(b); // reference error
+
+        // 선언은 했으나 할당한 적 없음
+        var c;
+        console.log(c); // undefined;
+
+        console.log(d); // undefined; <- 호이스팅
+        var d; // var는 함수 스코프 이외의 어디서 선언을 하던 가장 상단에 선언을 한 것으로 인식
+    </script>
+    <title>호이스팅</title>
+</head>
+<body>
+    
+</body>
+</html>
