@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText, innerHTML</title>
+</head>
+<body>
+    <button onclick="inText();">innerText</button>
+    <button onclick="inHTML();">innerHTML</button>
+
+    <div id="current"></div>
+
+    <script>
+        const now = new Date(); //날짜 객체
+
+        function inText() {
+            document.getElementById('current').innerText = "<em>" + now + "</em>";
+        }
+
+        function inHTML() {
+            document.getElementById('current').innerHTML = "<em>" + now + "</em>"; //<em> : 이탤릭 체, 기울임체
+        }
+    </script>
+</body>
+</html>

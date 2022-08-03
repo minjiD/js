@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_01</title>
+</head>
+<body id="wrap">
+    <button onclick="chColor();">배경색 변경</button>
+
+    <script>
+        let color = ["#ACFC32", "#56A1FF", "#C4A1FF", "#67E6E2", "#E6F922", "#FAC923"];
+
+        function chColor() {
+            let num = Math.floor(Math.random() * color.length);
+            document.getElementById("wrap").style.backgroundColor = color[num];
+            //문서객체.style.스타일 속성 = "값";
+        }
+
+        //다른 방식의 함수
+        var i = 0;
+        function changeColor() {
+            i++;
+            if(i >= color.length) {
+                i = 0;
+            }
+
+            let bodyTag = document.getElementById("wrap");
+            bodyTag.style.backgroundColor = color[i];
+        }
+    </script>
+</body>
+</html>
