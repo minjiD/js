@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (p>button{버튼$})*4 -->
+    <!-- [버튼1]을 클릭할 때마다 colorBg 함수 호출 -->
+    <p><button onclick="colorBg()">버튼1</button></p>
+    <p><button id="btn2">버튼2</button></p>
+    <!-- [버튼3],[버튼4] 마우스가 없을 경우 키보드[tab]키를 이용할 수 있도록 키보드 대응 이벤트 -->
+    <p><button onmouseover="colorBg();" onfocus="colorBg();">버튼3</button></p>
+    <p><button id="btn4">버튼4</button></p>
+
+    <script>
+        let color = ["blue", "red", "yellow", "green", "aqua"];
+        let i = 0;
+        function colorBg() {
+            i++;
+            if(i >= color.length) {
+                i = 0;
+            }
+            //let bodyTag = document.getElementsByTagName("body")[0];
+            let bodyTag = document.querySelector("body");
+            bodyTag.style.backgroundColor = color[i];
+        }
+
+        let btn2 = document.getElementById("btn2").onclick = function() {colorBg();};
+
+        let btn4 = document.getElementById("btn4");
+        btn4.onmouseover = btn4.onfocus = function() {colorBg();};
+    </script>
+</body>
+</html>

@@ -3,12 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>DOM</title>
+  <style>
+    #container {
+      width: 500px;
+      margin: 10px auto;
+      padding: 20px;
+    }
+
+    #info {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div id="container">    
     <h1>DOM을 공부합시다</h1>
-    <a href="#">더 보기</a>    
-    <div id="info"></div>
+    <a href="#" onclick="more(); this.onclick=''">더 보기</a>
+    <!-- this.onclick='' - 자기 자신을 하나만 나오도록 처리, 이후에는 공백으로 처리 -->
+    <div id="info"><!-- 넣어서 표시하고자 하는 위치 --></div>
   </div>
+
+  <script>
+    function more() {
+      let newP = document.createElement('p'); // 요소 노드 추가
+      let txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말이다."); // 텍스트 노드 추가
+      // 해당 노드의 자식 노드로 추가
+      newP.appendChild(txtNode); // 자식txtNode를 부모newP로 연결
+      document.getElementById("info").appendChild(newP); // 자식newP를 부모info로 연결(상위개념)
+    }
+  </script>
 </body>
 </html>

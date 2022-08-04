@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <link rel="stylesheet" href="./css/event.css">
+    <script>
+        function showDetail () {
+            document.querySelector("#desc").style.display = "block";
+            document.querySelector("#btnOpen").style.display = "none";
+        }
+
+        function hideDetail() {
+            document.querySelector("#desc").style.display = "none";
+            document.querySelector("#btnOpen").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div id="item">
+        <img src="./images/flower.jpg" alt="꽃">
+        <button id="btnOpen" class="over" onclick="showDetail()">상세 설명 닫기</button>
+        <div id="desc" class="detail">
+            <h3>그들을 우리</h3>
+            <p id="txtCon">못하다 굳세게 그들의 가진 하여도 것이다. 얼마나 목숨이 위하여서 풍부하게 그들을 우리의 이것이다. 얼음에 있는 가치를 황금시대다. 광야에서 유소년에게서 그와 충분히 것이다.보라, 그것을 뜨거운지라, 피다. 밝은 남는 두손을 시들어 심장의 얼음에 인간에 이는 붙잡아 것이다.</p>
+            <button id="btnClose" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+</body>
+</html>

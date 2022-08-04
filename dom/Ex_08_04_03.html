@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이어 팝업띄우기</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        #notice {
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            margin: 35px;
+            position: absolute;
+        }
+
+        #notice>h1 {
+            margin: 15px;
+        }
+
+        button {
+            position: relative;
+            left: 230px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- p{문서를 열면 팝업창이 표시됩니다.}+div#notice.popup>h1{공지사항}+ul>(li{공지사항내용})*5 -->
+    <p>문서를 열면 팝업창이 표시됩니다.</p>
+    <div id="notice" class="popup">
+        <h1>공지사항</h1>
+        <ul>
+            <li>공지사항내용</li>
+            <li>공지사항내용</li>
+            <li>공지사항내용</li>
+            <li>공지사항내용</li>
+            <li>공지사항내용</li>
+        </ul>
+        <button>닫기</button>
+    </div>
+
+    <script>
+        let btn = document.querySelector(".popup > button");
+        btn.addEventListener("click", btnClose);
+
+        function btnClose() {
+            document.getElementById("notice").style.display = "none";
+            document.querySelector("body").style.backgroundColor = "white";
+
+            /*
+            let notice = document.getElementById("notice");
+            let body = document.querySelector("body");
+            notice.style.display = "none";
+            body.style.backgroundColor = "white";
+            */
+        }
+    </script>
+</body>
+</html>
