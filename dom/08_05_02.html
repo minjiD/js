@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS3</li>
+        <li id="target">JAVA</li>
+    </ul>
+    <button onclick="callAdd(); this.onclick='';">appendChild</button>
+    <button onclick="callDel(); this.onclick='';">removeChild</button>
+    <button onclick="callBefore(); this.onclick='';">insertBefore</button>
+    <button onclick="callAfter(); this.onclick='';">insertAfter</button>
+
+    <script>
+        function callAdd() { //요소 생성
+            let li = document.createElement('li');
+            let text = document.createTextNode("Django");
+
+            li.appendChild(text);
+            document.querySelector("#target").appendChild(li);
+        }
+
+        function callDel() { //요소 삭제
+            let target = document.querySelectorAll("li")[0];
+            target.parentNode.removeChild(target);
+        }
+
+        function callBefore() { //해당 요소 전에 추가
+            let li = document.createElement("li");
+            let text = document.createTextNode('JQuery');
+            li.appendChild(text);
+            document.querySelector("#target").insertBefore(li, target.firstChild);
+        }
+
+        function callAfter() { //해당 요소 뒤에 추가
+            let li = document.createElement('li');
+            let text = document.createTextNode("JavaScript");
+            li.appendChild(text);
+            document.querySelector("#target").after(li);
+        }
+    </script>
+</body>
+</html>

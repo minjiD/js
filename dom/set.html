@@ -27,7 +27,7 @@
 				<li>로스팅 : 2019.06.17</li>
 				<button>장바구니 담기</button>
 			</ul>				
-			<a href="#" id="view">상세 설명 보기</a>				
+			<a href="#" id="view" onclick="viewCon(); this.onclick='';">상세 설명 보기</a>
 		</div>
 			
 		<div id="detail">									
@@ -48,5 +48,95 @@
 		</div>
 	</div>
 
+	<script>
+		//썸네일 이미지 변경
+		let img = document.querySelectorAll(".small");
+		let cup = document.querySelector("#cup");
+		for(i=0; i < img.length; i++) {
+			img[i].addEventListener("click", function() {
+				let cupSrc = this.getAttribute("src"); //작은 이미지의 src를 변수에 저장
+				cup.setAttribute("src", cupSrc); //큰 이미지의 src를 cupSrc로 설정
+			});
+		}
+
+		//상세 설명 보기
+		function viewCon() {
+			const view = document.querySelector("#view");
+		
+			let newDiv = document.createElement("div");
+			let newHr = document.createElement("hr");
+			let newH2 = document.createElement("h2");
+			let newUl = document.createElement("ul");
+			
+			newDiv.appendChild(newHr);
+			let txtH2 = document.createTextNode("상품 상세 정보");
+			newDiv.appendChild(txtH2);
+
+			let txtLi = [
+				"원산지:에디오피아",
+				"지 역:이르가체프 코체레",
+				"농 장:게뎁",
+				"고 도:1,950 ~ 2,000m",
+				"품 종:지역 토착종",
+				"가공법:워시드"
+			]
+			let liTxt;
+			let newLi;
+			for(i=0; i < txtLi.length; i++) {
+				// console.log(txtLi[i]);
+				newLi = document.createElement("li");
+				liTxt = document.createTextNode(txtLi[i]);
+				newLi.appendChild(liTxt);
+				// console.log(newLi);
+				newUl.appendChild(newLi);
+				// console.log(newUl);
+			}
+			
+			newDiv.appendChild(newUl);
+			// console.log(newDiv);
+			
+			let txtH3 = ["Information", "Flavor Note"];
+			let h3Txt;
+			let newH3;
+			for(i=0; i < txtH3.length; i++) {
+				// console.log(txtH3[i]);
+				newH3 = document.createElement("h3");
+				h3Txt = document.createTextNode(txtH3[i]);
+				newH3.appendChild(h3Txt);
+				// console.log(newH3);
+				newDiv.appendChild(newH3);
+				// console.log(newDiv);
+			}
+
+			let pTxt1 = document.createElement("p").createTextNode("2차 세계대전 이후 설립된 게뎁농장은 유기농 인증 농장으로 여성의 고용 창출과 지역사회 발전에 기여하며 3대째 이어져 내려오는 오랜 역사를 가진 농장입니다. 게뎁 농장은 SCAA 인증을 받은 커피 품질관리 실험실을 갖추고 있어 철처한 관리를 통해 스페셜티커피를 생산합니다.");
+
+			let pTxt2 = document.createElement("p").createTextNode("은은하고 다채로운 꽃향, 망고, 다크 체리, 달달함이 입안 가득.");
+			
+		}
+		
+
+		/*
+		const view = document.querySelector("#view");
+		const newDiv = document.createElement("div");
+		const detail = document.querySelector("#detail");
+		const desc = document.querySelector("#desc");
+		
+		//노드가 추가되어 상세 설명이 나타날 수 있게 설정
+		view.addEventListener("click", function() {
+			newDiv.appendChild(detail);
+			desc.after(newDiv);
+			detail.style.display = "block";
+		});
+		*/
+
+		/*
+		//display 변경하여 상세 설명이 나타날 수 있게 설정
+		const detail = document.querySelector("#detail");
+
+		view.addEventListener("click", function() {
+			detail.style.display = "block";
+		});
+		*/
+	</script>
 </body>
 </html>

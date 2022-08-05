@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js.js"></script>
+    <script>
+        $(function() {
+            $("h1").css("color", "red");
+            $("h2").css("background-color", "yellow");
+            $("h2").next().css("border", "1px solid #0f0");
+
+            let style = {
+                "background-color" : "yellowgreen",
+                "border" : "2px solid #f00"
+            }
+            $(".tt").css(style);
+        });
+    </script>
+    <title>jQuery</title>
+</head>
+<body>
+    <div class="tt">
+        <h1>제이쿼리</h1>
+        <h2>선택자</h2>
+        <h3>직접선택자</h3>
+    </div>
+</body>
+</html>

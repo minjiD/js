@@ -30,6 +30,22 @@
       // 해당 노드의 자식 노드로 추가
       newP.appendChild(txtNode); // 자식txtNode를 부모newP로 연결
       document.getElementById("info").appendChild(newP); // 자식newP를 부모info로 연결(상위개념)
+
+      //이미지 불러오기
+      let newImg = document.createElement('img'); //이미지 요소 노드 추가
+      let srcNode = document.createAttribute('src'); //src 속성 노드 추가
+      let altNode = document.createAttribute('alt'); //alt 속성 노드 추가
+
+      //속성의 값 설정
+      srcNode.value = "./images/dom.jpg"; //src 값 설정
+      altNode.value = "돔 트리 구조 이미지"; //alt 값 설정
+
+      //값을 설정하는 것 - set / 값을 가져오는 것 - get
+      newImg.setAttributeNode(srcNode); //속성값(src)을 부모(newImg)로 연결
+      newImg.setAttributeNode(altNode); //속성값(alt)을 부모(newImg)로 연결
+
+      document.querySelector("#info").appendChild(newImg); //이미지(newImg)를 부모(info)에 연결
+
     }
   </script>
 </body>

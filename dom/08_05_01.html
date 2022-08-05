@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드추가</title>
+    <style>
+        div {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+
+    <script>
+        const h1 = document.createElement('h1'); //요소 생성
+        let addText = document.createTextNode("문서 객체 동적으로 생성하기");//텍스트 생성
+
+        h1.appendChild(addText); //요소에 텍스트 추가
+        h1.style.color = "white"; //요소의 색상 변경
+        h1.style.margin = "5px";
+        h1.style.padding = "5px";
+        document.getElementById("text").appendChild(h1); //요소를 div에 연결
+    </script>
+</body>
+</html>
