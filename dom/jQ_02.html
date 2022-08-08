@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js.js"></script>
+    <script>
+        $(function(){
+            $('.wrap_1').css('border', '1px solid orange');
+
+            //직접선택자
+            $('.wrap_1 p').css('background-color', 'green');
+
+            //근접선택자(관계선택자)
+            $('.active').next('p').css('background-color', 'aqua');
+
+            //탐색선택자 중 위치선택자(배열처리)
+            $('.wrap_1 p').eq(1).css("background-color", 'red');
+
+            //탐색선택자 중 속성선택자 - style을 객체방식으로 사용
+            $('input[type=text]').css({'background-color':'skyblue'});
+            $('.wrap_1 p:eq(3) input').val("KOREA");
+
+            //객체조작 (요소 생성, 삭제, 복제, 속성변경)
+            $('.wrap2 p:first').after('<p>After (추가1)</p>');
+            $('.wrap2 p:first').before('<p>Before (추가2)</p>');
+
+            $('.wrap_1 p').eq(1).removeClass('active'); //클래스 삭제
+            $(".wrap_1").append('<p>추가 요소로 처리</p>'); //범위 맨아래 추가
+
+            $('.wrap3 p').wrapInner('<strong />');
+        });
+    </script>
+    <title>jQuery</title>
+</head>
+<body>
+    <!-- div.wrap_1>p*4 -->
+    <div class="wrap_1">
+        <p>텍스트1</p>
+        <p class="active">내용2</p>
+        <p>네이버</p>
+        <p><input type="text" value="Hello"></p>
+    </div>
+    <!-- div.wrap>p*2 -->
+    <div class="wrap2">
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+    <div class="wrap3">
+        <div>
+            <p>내용7</p>
+            <p>내용8</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+  <link rel="stylesheet" href="./css/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      var slider = $('.slider').bxSlider({
+        auto: true, //슬라이드 자동 실행여부
+        mode: "horizontal", //슬라이드 방향설정 default:horizontal, verical, fade
+        speed: 200,
+        autoHover: true, //마우스 hover 시 슬라이드 멈추는 것
+        autoDirection: "prev", //슬라이드 넘어가는 방향 : next, prev
+      });
+
+      $('#slideCount').text("전체 페이지 수 : " + slider.getSlideCount());
+    });
+  </script>
+
+<style>
+    p {
+        font-size: 35px;
+        text-align: right;
+        margin: 20px 3px 3px;
+        padding-right: 5px;
+    }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div>
+    <div>
+        <ul class="slider">
+            <li><img src="img/photo1.jpeg" alt="풍경"></li>
+            <li><img src="img/photo2.jpeg" alt="풍경"></li>
+            <li><img src="img/photo3.jpeg" alt="풍경"></li>
+            <li><img src="img/photo4.jpeg" alt="풍경"></li>
+            <li><img src="img/photo5.jpeg" alt="풍경"></li>
+            <li><img src="img/photo6.jpeg" alt="풍경"></li>
+        </ul>
+        <p id="slideCount"></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
