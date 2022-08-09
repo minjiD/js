@@ -6,7 +6,39 @@
 <script src="../dom/js.js"></script>
 <script>
 $(function(){
-
+	//', '를 사용하여 요소를 두 개 선택
+	$("#user_id_1, #user_pw_1").on("focus", function() { 
+		$(this).css("background-color", "pink");
+	});
+	$("#user_id_1, #user_pw_1").on("blur", function() {
+		$(this).css("background-color", "white");
+	});
+	/*
+	$("#user_id_1").on({
+		'focus':function() {
+			$("#user_id_1").css({"background-color":"pink"});
+		},
+		'blur':function() {
+			$("#user_id_1").css({"background-color":"white"});
+		}
+	});
+	$("#user_pw_1").on({
+		'focus':function() {
+			$("#user_pw_1").css({"background-color":"pink"});
+		},
+		'blur':function() {
+			$("#user_pw_1").css({"background-color":"white"});
+		}
+	});
+	*/
+	$("#frm_2").on({
+		'focusin':function() {
+			$("#frm_2").css("background-color", "pink");
+		},
+		'focusout':function() {
+			$("#frm_2").css("background-color", "white");
+		}
+	});
 });
 </script>
 </head>

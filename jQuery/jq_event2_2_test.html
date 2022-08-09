@@ -6,7 +6,16 @@
 <script src="../dom/js.js"></script>
 <script>
 $(function(){
-	
+	$("#btn1").on("mouseover", function() {
+		$(".txt").text("Javascript");
+	});
+	$("#btn2").on("mouseover", function() {
+		$(".txt").text("Welcome!");
+	});
+	$("#btn1, #btn2").on("mouseout", function() {
+		$(".txt").empty(); //요소가 담고 있는 내용만 삭제
+		//empty() : 선택한 요소의 내용만 지울 뿐 요소는 남아있다는 것을 주의 
+	});
 });
 </script>
 </head>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 효과와 애니메이션 </title>  
+<script src="../dom/js.js"></script>
+<script>
+$(function(){
+	$(".txt1").animate({marginLeft: "400px"}, 1000);
+	$(".txt1").animate({marginTop: "400px"}, 1000, function() {
+		$(".txt1").css({"background-color" : "red"});
+	});
+	$(".txt1").animate({marginLeft: "0"}, 1000);
+	$(".txt1").animate({marginTop: "0"}, 1000);
+});
+</script>
+<style>
+	* { 
+		margin: 0;
+	}
+	.txt1 {
+		width: 50px;
+		text-align: center;
+		background-color: aqua;
+	}
+</style>
+</head>
+<body>
+	<p class="txt1">내용1</p>
+</body>
+</html>
