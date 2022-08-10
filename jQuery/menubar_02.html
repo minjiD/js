@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../dom/js.js"></script>
+    <style>
+        ul {
+            display: none;
+        }
+    </style>
+    <title>메뉴바_02</title>
+</head>
+<body>
+    <!-- div#wrap>(a{이벤트대상$}+div.list>ul>(li>a{list$})*3)*3 -->
+    <div id="wrap">
+        <p class="btn1"><a href="#">이벤트대상1</a></p>
+        <ul>
+            <li><a href="#">list1</a></li>
+            <li><a href="#">list2</a></li>
+            <li><a href="#">list3</a></li>
+        </ul>
+    
+        <p class="btn1"><a href="#">이벤트대상2</a></p>
+        <ul>
+            <li><a href="#">list4</a></li>
+            <li><a href="#">list5</a></li>
+            <li><a href="#">list6</a></li>
+        </ul>
+    
+        <p class="btn1"><a href="#">이벤트대상3</a></p>
+        <ul>
+            <li><a href="#">list7</a></li>
+            <li><a href="#">list8</a></li>
+            <li><a href="#">list9</a></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function() {
+            $('.btn1 a').on("click", function() {
+                $(".btn1").next("ul").filter(":visible").slideUp(); //필터를 이용하여 보이는 것을 숨김
+
+                $(this).parent().next().slideDown();
+                return false; //기본 이벤트를 차단하여 이동을 막음
+            });
+        });
+    </script>
+</body>
+</html>

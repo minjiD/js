@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menubar.css">
+    <title>메뉴바</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="#">logo</a></h1>
+
+            <!-- ul>li>a+div>ul>(li>a{menu-$})*4 -->
+            <ul id="gnb">
+                <li>
+                    <a href="#">MENU01</a>
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">MENU02</a>
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">MENU03</a>
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">MENU04</a>
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                            <li><a href="#">menu4-4</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- ul#util>li*2 -->
+            <ul id="util">
+                <li>login</li>
+                <li>join</li>
+            </ul>
+        </header>
+
+    </div>
+
+    <script>
+        let gnb = document.querySelectorAll("#gnb>li");
+        let gnbElement = document.querySelector("#gnb");
+
+        for(let i=0; i < gnb.length; i++) {
+            gnb[i].addEventListener("mouseover", () => {
+                gnbElement.classList.add('on');
+            });
+        }
+
+        let headerElement = document.querySelector("header");
+        headerElement.addEventListener("mouseout", (e) => {
+            if(e.target.id == "gnb") {
+                gnbElement.classList.remove("on");
+            }
+        });
+    </script>
+</body>
+</html>

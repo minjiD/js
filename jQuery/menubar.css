@@ -1,0 +1,93 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 구조화 */
+#wrap {
+    width: 100%; /* margin으로 제어 불가 */
+}
+
+header {
+    position: fixed; /* 위치 고정 */
+    width: 100%;
+    left: 0; /*위치값*/
+    top: 0; /*위치값*/
+    padding: 0 30px;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex; /* flex 사용 시 간격 처리해야함 */
+    justify-content: space-between; /* item들의 사이에 균일한 간격처리 */
+    box-sizing: border-box; /* 전체 요소들이 화면 안으로 들어오도록 설정 - border line으로 처리하겠다는 의미 */
+}
+
+header h1 { /* header 안의 h1에 적용 */
+    padding: 20px 0;
+}
+
+header > #gnb { /* header의 자식인 gnb에 적용 */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; /* item들의 사이와 양끝에 균일한 간격처리 */
+    /* position: absolute; 대메뉴 위치 가운데로 
+    top: 30px; */
+    margin-top: 30px;
+}
+
+/* 
+::before ::after
+::before - 선택한 요소 앞에 가상 컨텐츠 삽입
+::after - 선택한 요소 뒤에 가상 컨텐츠 삽입
+
+Ex) 
+h1.st::before {
+    content: "String"; //가상 컨텐츠안에 문자열 삽입
+    content: url("이미지 경로"); //가상 컨텐츠안에 이미지 삽입
+    content: attr(class); //가상 컨텐츠안에 속성 값 삽입
+    content: ""; //가상 컨텐츠 빈공간을 만듦
+}
+*/
+
+header > #gnb::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    height: 180px;
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 0 10px 10px 0 rgba(48, 49, 51, 6%);
+    display: block;
+}
+
+header > #gnb::before {
+    display: none;
+}
+
+header > #gnb.on::before { /* on이 될 때 보여주기 */
+    display: block;
+}
+
+header > #gnb > li > .snb { /* 절대 경로 - snb의 경로*/
+    position: absolute;
+    top: 100px;
+    display: none;
+}
+
+header > #gnb.on > li > .snb {
+    display: block;
+}
+
+header > #gnb > li > .snb > ul > li+li { /*?*/
+    margin-top: 20px;
+}
